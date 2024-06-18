@@ -14,7 +14,7 @@ This project was generated with following technical stacks
 1. Run `npm run compodoc` to generate docs
 2. Run `npm run compodoc:serve` to serve in local browser
 
-![alt text](https://github.com/sgrmhrzn/role-management/blob/main/src/assets/image-doc.jpg)
+![alt text](https://github.com/sgrmhrzn/role-managment/blob/main/src/assets/image-doc.jpg)
 
 ## Code scaffolding
 
@@ -25,6 +25,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Snapshots
-![alt text](https://github.com/sgrmhrzn/role-management/blob/main/src/assets/image1.jpg)
-![alt text](https://github.com/sgrmhrzn/role-management/blob/main/src/assets/image2.jpg)
-![alt text](https://github.com/sgrmhrzn/role-management/blob/main/src/assets/image3.jpg)
+![alt text](https://github.com/sgrmhrzn/role-managment/blob/main/src/assets/image1.jpg)
+![alt text](https://github.com/sgrmhrzn/role-managment/blob/main/src/assets/image2.jpg)
+![alt text](https://github.com/sgrmhrzn/role-managment/blob/main/src/assets/image3.jpg)
