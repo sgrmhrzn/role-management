@@ -307,7 +307,7 @@ export class AppEffects {
                     this.userService.getAllAssignedRolesUsers().pipe(mergeMap((assignedRolesUsers: IUserAssignModel[]) => {
                         const users = rawUsers.map(x => {
                             const assignedRole = assignedRolesUsers.find(l => l.userIds.includes(x.id));
-                            if (assignedRole) {
+                            if (assignedRole && assignedRole.role) {
                                 x.role = assignedRole?.role;
                             }
                             return x;
@@ -315,9 +315,11 @@ export class AppEffects {
                         return zip(users.filter(r => r.role).map(r => r.role ? this.roleService.getRolePermissons(r.role.id) : of(null))).pipe(
                             map(permissionData => {
                                 permissionData?.forEach((x: any) => {
-                                    const user = users.find(y => y?.role?.id === x[0].role.id);
-                                    if (user) {
-                                        user.permissions = x[0].permissionIds;
+                                    if (x[0]) {
+                                        const user = users.find(y => y?.role?.id === x[0].role.id);
+                                        if (user) {
+                                            user.permissions = x[0].permissionIds;
+                                        }
                                     }
                                 })
                                 return actions.auditRequestSuccess({ users });

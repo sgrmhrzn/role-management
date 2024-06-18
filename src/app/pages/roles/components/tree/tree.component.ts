@@ -43,6 +43,7 @@ export class TreeComponent implements OnInit {
     },
     permissionIds: []
   };
+  permissionIds = new Array<string>();
 
   @Input() onSave!: Observable<void>;
   subscription = new Subscription();
@@ -59,18 +60,19 @@ export class TreeComponent implements OnInit {
     //get permissions data 
     const r = await firstValueFrom(this.permissions$);
     this.permissionNodes = this.mapToTreeNodeData(r);
-    console.log(r, this.permissionNodes);
+
     //get assigned permissions of the role
     const res = await firstValueFrom(this.roleService.getRolePermissons(this.nzModalData?.id))
     if (res?.length) {
       const permission = res[0];
-      this.assignedPermissions = { ...permission, permissionIds: [..._.cloneDeep(permission.permissionIds)] };
-      this.defaultCheckedKeys = this.assignedPermissions.permissionIds;
-      this.defaultSelectedKeys = this.assignedPermissions.permissionIds;
+      this.assignedPermissions = { ...permission };
+      this.permissionIds = [..._.cloneDeep(permission.permissionIds)];
+      this.defaultCheckedKeys = this.permissionIds;
+      this.defaultSelectedKeys = this.permissionIds;
     }
 
     this.subscription = this.onSave.subscribe(() => {
-      this.store.dispatch(assignPermissionsRequest({ assignedPermissions: this.assignedPermissions }))
+      this.store.dispatch(assignPermissionsRequest({ assignedPermissions: { ...this.assignedPermissions, permissionIds: this.permissionIds } }));
     })
 
   }
@@ -80,8 +82,8 @@ export class TreeComponent implements OnInit {
    * @param event mouse click event of check/uncheck
    */
   nzEvent(event: NzFormatEmitEvent): void {
-    if (this.assignedPermissions && event.keys && event.eventName === 'check') {
-      this.assignedPermissions.permissionIds = event.keys;
+    if (this.permissionIds && event.keys && event.eventName === 'check') {
+      this.permissionIds = event.keys;
       this.valueChanged.next(true);
     }
   }

@@ -49,6 +49,8 @@ export class StaffsComponent implements OnInit {
   }
 
   async ngOnInit() {
+
+    //permission handling
     const user = await firstValueFrom(this.activeUser$);
     if (user?.permissions?.includes(PermissionsEnums.StaffsAllPrivilege)) {
       this.permission = {

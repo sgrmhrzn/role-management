@@ -12,7 +12,7 @@ import { NzDrawerModule, NzDrawerOptions, NzDrawerRef, NzDrawerService } from 'n
 import { ConfigureComponent } from './components/configure/configure.component';
 import { Store } from '@ngrx/store';
 import { IGlobalState } from '../../core/state/app.reducer';
-import { Observable } from 'rxjs';
+import { Observable, firstValueFrom } from 'rxjs';
 import { IRoleModel } from '../../core/models/role.model';
 import { selectActiveUser, selectRoles } from '../../core/state/app.selectors';
 import { deleteRoleRequest } from '../../core/state/app.action';
@@ -38,12 +38,48 @@ export class RolesComponent implements OnInit {
   roles$: Observable<IRoleModel[]> = this.store.select(selectRoles);
   activeUser$ = this.store.select(selectActiveUser);
   permissionEnum = PermissionsEnums;
-
+  permission = {
+    add: false,
+    update: false,
+    delete: false,
+    configure: false
+  }
   constructor(private modalService: NzModalService, private drawerService: NzDrawerService, private store: Store<IGlobalState>) {
 
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    //permission handling
+    const user = await firstValueFrom(this.activeUser$);
+    if (user?.permissions?.includes(PermissionsEnums.RolesAllPrivilege)) {
+      this.permission = {
+        add: true,
+        update: true,
+        delete: true,
+        configure: true
+      }
+    } else {
+      if (user?.permissions?.includes(PermissionsEnums.RolesAllActionPrivilege)) {
+        this.permission = {
+          add: true,
+          update: true,
+          delete: true,
+          configure: true
+        }
+      } else {
+
+        if (user?.permissions?.includes(PermissionsEnums.RolesAddPrivilege)) {
+          this.permission.add = true;
+        } if (user?.permissions?.includes(PermissionsEnums.RolesEditPrivilege)) {
+          this.permission.update = true;
+        } if (user?.permissions?.includes(PermissionsEnums.RolesDeletePrivilege)) {
+          this.permission.delete = true;
+        } if (user?.permissions?.includes(PermissionsEnums.RolesCofigurePrivilege)){
+          this.permission.configure = true;
+        }
+      }
+
+    }
   }
 
   /**

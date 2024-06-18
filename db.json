@@ -98,14 +98,6 @@
       "username": "eric",
       "password": "123456",
       "createdDate": "2024-06-18T10:47:12.638Z"
-    },
-    {
-      "id": "efe85a9e-4e66-4cdf-abcf-8e6b506255a2",
-      "name": "test user",
-      "canDelete": true,
-      "username": "test",
-      "password": "123456",
-      "createdDate": "2024-06-18T14:24:36.253Z"
     }
   ],
   "roles": [
@@ -148,7 +140,8 @@
       },
       "permissionIds": [
         "0-0",
-        "0-1"
+        "0-1-0",
+        "0-1-1-0"
       ]
     },
     {
@@ -161,6 +154,20 @@
       },
       "permissionIds": [
         "0-1"
+      ]
+    },
+    {
+      "id": "fc65c5b2-694f-4339-8d5d-7470ea1bcaf3",
+      "role": {
+        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
+        "title": "Test",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1",
+        "0-2"
       ]
     }
   ],
@@ -687,6 +694,507 @@
         "title": "Test",
         "canDelete": true,
         "isView": false
+      }
+    },
+    {
+      "id": "80f0efab-7d7b-478c-afc1-8cb944db4c01",
+      "activityDate": "2024-06-18T15:12:54.722Z",
+      "type": 2,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Test role added",
+      "role": {
+        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
+        "title": "Test",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "ec29f6b6-0ad1-4549-bcec-771c39623093",
+      "activityDate": "2024-06-18T15:13:00.427Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Test",
+      "role": {
+        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
+        "title": "Test",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1",
+        "0-2"
+      ]
+    },
+    {
+      "id": "68c0b2c1-7285-4ba5-a2ef-80e6133553f6",
+      "activityDate": "2024-06-18T15:13:05.947Z",
+      "type": 4,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Test role deleted",
+      "role": {
+        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
+        "title": "Test",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "078ea1ad-97cd-474f-9bff-18a415b5d7d4",
+      "activityDate": "2024-06-18T15:18:22.945Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "39730dd0-8143-4b30-bb52-ef2ef6fc3f02",
+      "activityDate": "2024-06-18T15:18:41.976Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0-0",
+        "0-0-1-1",
+        "0-0-1-2",
+        "0-0-1-3"
+      ]
+    },
+    {
+      "id": "a7c2567b-e9ef-47f8-b9ff-04b59b4de8f7",
+      "activityDate": "2024-06-18T15:18:56.303Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-0-1-2",
+        "0-0-1-3",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "9c7f0454-c173-4084-9b2a-3221795e54fc",
+      "activityDate": "2024-06-18T15:19:15.584Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-0-1-2",
+        "0-0-1-3",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "2666bbf4-595a-401f-9ee4-42d2d1398daf",
+      "activityDate": "2024-06-18T15:19:40.504Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-0-1-3",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "f905a608-40ca-4c92-97e8-fb48d9574f25",
+      "activityDate": "2024-06-18T15:19:54.062Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-0-1-3",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "53eaede7-c07a-4bc8-978f-e406ae9ad7b7",
+      "activityDate": "2024-06-18T15:20:02.760Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-0-1-3",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "2cfcbefa-4029-4ad6-ae40-ec747e718ee4",
+      "activityDate": "2024-06-18T15:20:09.710Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2"
+      ]
+    },
+    {
+      "id": "5c7eb813-eb7d-4a1b-9dc3-212874df44d3",
+      "activityDate": "2024-06-18T15:20:59.678Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0"
+      ]
+    },
+    {
+      "id": "71f72a16-f37e-4a83-ad89-ecd854909d01",
+      "activityDate": "2024-06-18T15:21:00.913Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0"
+      ]
+    },
+    {
+      "id": "5b3872a5-91e9-434c-a5d1-d4730d612eee",
+      "activityDate": "2024-06-18T15:21:12.033Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0-0",
+        "0-0-1-0",
+        "0-0-1-1",
+        "0-0-1-2"
+      ]
+    },
+    {
+      "id": "c8e35acf-2a73-409c-a439-479794613215",
+      "activityDate": "2024-06-18T15:23:33.196Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0"
+      ]
+    },
+    {
+      "id": "66504c13-5dde-475f-8a3f-461e17276162",
+      "activityDate": "2024-06-18T15:24:46.341Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0-0",
+        "0-0-1-1",
+        "0-0-1-2",
+        "0-0-1-3"
+      ]
+    },
+    {
+      "id": "9467a079-c337-418d-9b6e-a53532fc80e9",
+      "activityDate": "2024-06-18T15:25:56.400Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0-0",
+        "0-0-1-1",
+        "0-0-1-2",
+        "0-0-1-3"
+      ]
+    },
+    {
+      "id": "4b8f1513-c3cd-4407-9cfa-6cc0f678b114",
+      "activityDate": "2024-06-18T15:28:24.050Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-1-1-1",
+        "0-1-1-2",
+        "0-0"
+      ]
+    },
+    {
+      "id": "46b74efe-3dc0-4b77-8746-f9495068099d",
+      "activityDate": "2024-06-18T15:28:36.640Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1",
+        "0-2"
+      ]
+    },
+    {
+      "id": "bc727c41-259d-4e95-a313-dd9612949db0",
+      "activityDate": "2024-06-18T15:28:43.488Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b6dffb84-b9ba-439c-8832-949ff8164a6c",
+      "activityDate": "2024-06-18T15:28:48.103Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1",
+        "0-2"
+      ]
+    },
+    {
+      "id": "af0da7b7-e4fa-43d6-ac69-43239ea3d8dd",
+      "activityDate": "2024-06-18T15:28:52.364Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1-0",
+        "0-1-1-0"
+      ]
+    },
+    {
+      "id": "5f9bc8d7-ba04-4df4-adc9-fa0014451de9",
+      "activityDate": "2024-06-18T15:29:38.185Z",
+      "type": 7,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "test user user deleted",
+      "staff": {
+        "id": "efe85a9e-4e66-4cdf-abcf-8e6b506255a2",
+        "name": "test user",
+        "canDelete": true,
+        "username": "test",
+        "password": "123456",
+        "createdDate": "2024-06-18T14:24:36.253Z"
       }
     }
   ],
