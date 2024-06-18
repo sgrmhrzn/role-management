@@ -11,11 +11,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { GlobalState, appReducer } from './core/state/app.reducer';
+import { IGlobalState, appReducer } from './core/state/app.reducer';
 import { AppEffects } from './core/state/app.effect';
 
 registerLocaleData(en);
 
 export const appConfig: ApplicationConfig = {
-  providers: [importProvidersFrom(RouterModule.forRoot(routes)), provideNzIcons(), provideNzI18n(en_US), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient(), provideStore<GlobalState>({ global: appReducer }), provideEffects(AppEffects)]
+  providers: [importProvidersFrom(RouterModule.forRoot(routes)), provideNzIcons(), provideNzI18n(en_US), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient(), provideStore<IGlobalState>({ global: appReducer }), provideEffects(AppEffects)]
 };

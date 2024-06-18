@@ -8,7 +8,7 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { Store } from '@ngrx/store';
-import { GlobalState } from '../../core/state/app.reducer';
+import { IGlobalState } from '../../core/state/app.reducer';
 import { selectActiveUser, selectCounts } from '../../core/state/app.selectors';
 import { CommonModule } from '@angular/common';
 import { fetchRolesRequest, fetchPermissionsRequest, fetchUsersRequest } from '../../core/state/app.action';
@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   counts$ = this.store.select(selectCounts);
   activeUser$ = this.store.select(selectActiveUser);
 
-  constructor(private store: Store<GlobalState>) { }
+  constructor(private store: Store<IGlobalState>) { }
 
   ngOnInit() {
 

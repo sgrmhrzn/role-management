@@ -6,7 +6,7 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { Observable, Subscription, map } from 'rxjs';
 import { IUserAssignModel, IUserModel } from '../../../../core/models/user.model';
 import { Store } from '@ngrx/store';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { selectAssignedUsers, selectUsers } from '../../../../core/state/app.selectors';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -56,7 +56,7 @@ export class UserAssignmentComponent implements OnInit, OnDestroy {
   @Output() valueChanged = new EventEmitter<boolean>();
   allRolesUser = new Array<IUserAssignModel>();
 
-  constructor(private store: Store<GlobalState>, private roleService: RoleService, private userService: UserService, private messageService: NzMessageService) {
+  constructor(private store: Store<IGlobalState>, private roleService: RoleService, private userService: UserService, private messageService: NzMessageService) {
   }
 
   ngOnInit(): void {

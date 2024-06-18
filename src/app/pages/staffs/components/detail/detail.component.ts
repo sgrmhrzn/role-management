@@ -4,7 +4,7 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NZ_DRAWER_DATA } from 'ng-zorro-antd/drawer';
 import { IDrawerParams } from '../../../../core/models/drawer.model';
 import { Store } from '@ngrx/store';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { selectUserById } from '../../../../core/state/app.selectors';
 import { CommonModule } from '@angular/common';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
@@ -34,7 +34,7 @@ export class DetailComponent {
       return clonedUser;
     }))))
 
-  constructor(private store: Store<GlobalState>, private userService: UserService) {
+  constructor(private store: Store<IGlobalState>, private userService: UserService) {
 
   }
 }

@@ -1,16 +1,16 @@
 import { createSelector } from '@ngrx/store';
-import { GlobalState } from './app.reducer';
+import { IGlobalState } from './app.reducer';
 import _ from 'lodash';
 import { IUserModel } from '../models/user.model';
 
 //selector for roles
-export const selectRoles = (state: GlobalState) => state.global.roles;
+export const selectRoles = (state: IGlobalState) => state.global.roles;
 
 //selector for permissions
-export const selectPermissions = (state: GlobalState) => state.global.permissons;
+export const selectPermissions = (state: IGlobalState) => state.global.permissons;
 
 //selector for users
-export const selectUsers = (state: GlobalState) => state.global.users;
+export const selectUsers = (state: IGlobalState) => state.global.users;
 
 //selector for user by id
 export const selectUserById = (id: string) =>
@@ -19,10 +19,10 @@ export const selectUserById = (id: string) =>
     });
 
 //selector for audit users
-export const selectAuditUsers = (state: GlobalState) => state.global.auditUsers;
+export const selectAuditUsers = (state: IGlobalState) => state.global.auditUsers;
 
 //selector for reports
-export const selectReports = (state: GlobalState) => state.global.reports;
+export const selectReports = (state: IGlobalState) => state.global.reports;
 
 //selector for assigned users
 export const selectAssignedUsers = (userIds: string[]) =>
@@ -44,10 +44,10 @@ export const selectRoleByTitle = (title: string) =>
     });
 
 //selector for active user
-export const selectActiveUser = (state: GlobalState) => state.global.activeUser;
+export const selectActiveUser = (state: IGlobalState) => state.global.activeUser;
 
 //selector for dashboard metrics
-export const selectCounts = (state: GlobalState) => {
+export const selectCounts = (state: IGlobalState) => {
     return {
         roles: state.global.roles.length,
         users: state.global.users.length,

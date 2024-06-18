@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { reportingRequest } from '../../../../core/state/app.action';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { selectReports } from '../../../../core/state/app.selectors';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { CommonModule } from '@angular/common';
@@ -23,7 +23,7 @@ export class ReportingComponent implements OnInit {
   activityTypeEnum = ActivityEnum;
   acitivityTypes = [];
   permissionEnums = Object.entries(PermissionsEnums);
-  constructor(private store: Store<GlobalState>) {
+  constructor(private store: Store<IGlobalState>) {
   }
   ngOnInit(): void {
     // console.log(Object.entries(this.permissionEnums).find(x => x[1] === '0-0'))

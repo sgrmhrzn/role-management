@@ -6,6 +6,9 @@ This project was generated with following technical stacks
 3.	Typescript v5.4.2
 4.	Json-server v1.0.0-beta.1
 
+## Generate and browse documentation in local
+1. Run `npm run compodoc` to generate docs
+2. Run `npm run compodoc:serve` to serve in local browser
 
 ## Run in local 
 1. Run `npx json-server .\db.json` for local db

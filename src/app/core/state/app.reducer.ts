@@ -8,14 +8,14 @@ import { IActivityModel } from "../models/activity.model";
 /**
  * Global state of store
  */
-export interface GlobalState {
-  global: AppState
+export interface IGlobalState {
+  global: IAppState
 }
 
 /**
  * App state of store
  */
-export interface AppState {
+export interface IAppState {
   roles: IRoleModel[];
   permissons: IPermissionModel[];
   users: IUserModel[];
@@ -28,7 +28,7 @@ export interface AppState {
 /**
  * Initial state of store
  */
-export const initialState: AppState = {
+export const initialState: IAppState = {
   roles: [],
   permissons: [],
   users: [],
@@ -44,7 +44,7 @@ export const initialState: AppState = {
  * @param action any
  * @returns 
  */
-export function appReducer(state = initialState, action: any): AppState {
+export function appReducer(state = initialState, action: any): IAppState {
   switch (action.type) {
     case loginRequestSuccess.type: {
       return {

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { Store } from '@ngrx/store';
 import { addRoleRequest, updateRoleRequest } from '../../../../core/state/app.action';
 import { IRoleModel } from '../../../../core/models/role.model';
@@ -42,7 +42,7 @@ export class ModalComponent implements OnInit {
   checkRoleTitle$!: Observable<IRoleModel | undefined>;
 
   constructor(private fb: NonNullableFormBuilder,
-    private store: Store<GlobalState>, private roleService: RoleService,
+    private store: Store<IGlobalState>, private roleService: RoleService,
     private messageService: NzMessageService,
     private commonService: CommonService) {
 

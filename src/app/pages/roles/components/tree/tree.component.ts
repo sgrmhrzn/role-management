@@ -5,7 +5,7 @@ import { IPermissionAssignModel, IPermissionModel } from '../../../../core/model
 import { selectPermissions } from '../../../../core/state/app.selectors';
 import { Store } from '@ngrx/store';
 import { RoleService } from '../../../../core/services/role.service';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { IRoleModel } from '../../../../core/models/role.model';
 import { NZ_DRAWER_DATA, NzDrawerRef } from 'ng-zorro-antd/drawer';
 import { IDrawerParams } from '../../../../core/models/drawer.model';
@@ -49,7 +49,7 @@ export class TreeComponent implements OnInit {
 
   @Output() valueChanged = new EventEmitter<boolean>();
 
-  constructor(private store: Store<GlobalState>, private roleService: RoleService) {
+  constructor(private store: Store<IGlobalState>, private roleService: RoleService) {
 
   }
 

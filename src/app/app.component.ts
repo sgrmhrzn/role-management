@@ -6,7 +6,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { AuthLayoutComponent } from './pages/auth-layout/auth-layout.component';
 import { Store } from '@ngrx/store';
-import { GlobalState } from './core/state/app.reducer';
+import { IGlobalState } from './core/state/app.reducer';
 import { selectActiveUser } from './core/state/app.selectors';
 import { map } from 'rxjs';
 import { fetchPermissionsRequest, fetchRolesRequest, fetchUsersRequest, loginRequestSuccess } from './core/state/app.action';
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     a?.id ? this.initializeData() : this.router.navigateByUrl('login');
   }))
 
-  constructor(private router: Router, private store: Store<GlobalState>) {
+  constructor(private router: Router, private store: Store<IGlobalState>) {
 
   }
   initializeData(){

@@ -11,7 +11,7 @@ import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzDrawerModule, NzDrawerOptions, NzDrawerRef, NzDrawerService } from 'ng-zorro-antd/drawer';
 import { ConfigureComponent } from './components/configure/configure.component';
 import { Store } from '@ngrx/store';
-import { GlobalState } from '../../core/state/app.reducer';
+import { IGlobalState } from '../../core/state/app.reducer';
 import { Observable } from 'rxjs';
 import { IRoleModel } from '../../core/models/role.model';
 import { selectActiveUser, selectRoles } from '../../core/state/app.selectors';
@@ -39,7 +39,7 @@ export class RolesComponent implements OnInit {
   activeUser$ = this.store.select(selectActiveUser);
   permissionEnum = PermissionsEnums;
 
-  constructor(private modalService: NzModalService, private drawerService: NzDrawerService, private store: Store<GlobalState>) {
+  constructor(private modalService: NzModalService, private drawerService: NzDrawerService, private store: Store<IGlobalState>) {
 
   }
 

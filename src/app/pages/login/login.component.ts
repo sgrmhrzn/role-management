@@ -5,7 +5,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { GlobalState } from '../../core/state/app.reducer';
+import { IGlobalState } from '../../core/state/app.reducer';
 import { loginRequest } from '../../core/state/app.action';
 @Component({
   selector: 'app-login',
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required]],
   });
 
-  constructor(private fb: NonNullableFormBuilder, private store: Store<GlobalState>) { }
+  constructor(private fb: NonNullableFormBuilder, private store: Store<IGlobalState>) { }
   ngOnInit(): void {
   }
 

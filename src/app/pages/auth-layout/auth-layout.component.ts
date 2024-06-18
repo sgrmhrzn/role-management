@@ -6,7 +6,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { selectActiveUser } from '../../core/state/app.selectors';
-import { GlobalState } from '../../core/state/app.reducer';
+import { IGlobalState } from '../../core/state/app.reducer';
 import { Store } from '@ngrx/store';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
@@ -26,7 +26,7 @@ export class AuthLayoutComponent {
   activeUser$ = this.store.select(selectActiveUser);
   isCollapsed = false;
   permissionEnum = PermissionsEnums;
-  constructor(private store: Store<GlobalState>, private router: Router) {
+  constructor(private store: Store<IGlobalState>, private router: Router) {
 
   }
 

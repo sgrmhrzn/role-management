@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzDrawerModule, NzDrawerOptions, NzDrawerRef, NzDrawerService } from 'ng-zorro-antd/drawer';
 import { Store } from '@ngrx/store';
-import { GlobalState } from '../../core/state/app.reducer';
+import { IGlobalState } from '../../core/state/app.reducer';
 import { Observable, firstValueFrom } from 'rxjs';
 import { IRoleModel } from '../../core/models/role.model';
 import { selectActiveUser, selectUsers } from '../../core/state/app.selectors';
@@ -44,7 +44,7 @@ export class StaffsComponent implements OnInit {
     update: false,
     delete: false
   }
-  constructor(private modalService: NzModalService, private drawerService: NzDrawerService, private store: Store<GlobalState>) {
+  constructor(private modalService: NzModalService, private drawerService: NzDrawerService, private store: Store<IGlobalState>) {
 
   }
 

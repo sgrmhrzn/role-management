@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NzTableModule } from 'ng-zorro-antd/table';
-import { GlobalState } from '../../../../core/state/app.reducer';
+import { IGlobalState } from '../../../../core/state/app.reducer';
 import { Store } from '@ngrx/store';
 import { auditRequest } from '../../../../core/state/app.action';
 import { selectAuditUsers } from '../../../../core/state/app.selectors';
@@ -20,7 +20,7 @@ export class AuditComponent implements OnInit {
   users$ = this.store.select(selectAuditUsers);
   permissionEnums = PermissionsEnums;
 
-  constructor(private store: Store<GlobalState>) {
+  constructor(private store: Store<IGlobalState>) {
 
   }
   ngOnInit(): void {
