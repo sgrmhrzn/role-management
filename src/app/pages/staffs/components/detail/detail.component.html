@@ -1,0 +1,29 @@
+@if (user$ | async; as user) {
+<nz-avatar nz-tooltip [nzSize]="100" [nzText]="user.name?.charAt(0)" style="color:#f56a00; background-color:#fde3cf;font-size: 46px;"></nz-avatar>
+<div class="details">
+    <div>Name</div>
+    <div class="info"><b>{{user.name}}</b></div>
+    <div>Username</div>
+    <div class="info"><b>{{user.username}}</b></div>
+    <div>Password</div>
+    <div class="info"><b>{{user.password}}</b></div>
+    <div>Role</div>
+    <div class="info"><b>{{user.role?.title || '-'}}</b></div>
+    <div>Joined date</div>
+    <div class="info"><b>{{user.createdDate | dateTimeFormat}}</b></div>
+</div>
+<!-- <nz-descriptions nzTitle="User Info" nzBordered nzLayout="vertical" [nzColumn]="2">
+    <nz-descriptions-item nzTitle="Name"><b>{{user.name}}</b></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Role"><b>{{user.role?.title}}</b></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Username"><b>{{user.username}}</b></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Joined data">
+        <b>2024-06-18</b>
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Is Active">
+        <nz-badge nzStatus="success" nzText="Active"></nz-badge>
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Negotiated Amount">$80.00</nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Discount">$20.00</nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Official Receipts">$60.00</nz-descriptions-item> 
+</nz-descriptions> -->
+}

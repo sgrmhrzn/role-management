@@ -1,0 +1,28 @@
+<nz-tabset [(nzSelectedIndex)]="selectedIndex">
+    <nz-tab *ngFor="let tab of tabs; let i = index" [nzTitle]="tab">
+        @switch(i){
+        @case(0){
+        <ng-template nz-tab>
+            <app-tree [onSave]="savePermissionsEvent.asObservable()" (valueChanged)="valueChanged($event)"></app-tree>
+        </ng-template>
+        }
+        @case(1){
+        <ng-template nz-tab>
+            <app-user-assignment [onSave]="saveUsersEvent.asObservable()"
+                (valueChanged)="valueChanged($event)"></app-user-assignment>
+        </ng-template>
+        }
+        @default{
+
+        }
+        }
+    </nz-tab>
+</nz-tabset>
+
+@if(!isView){
+<div style="position: fixed;bottom: 0;margin-bottom: 15px;width: 100%;">
+    <nz-divider style="margin: 10px -22px;"></nz-divider>
+    <button nz-button nzType="default" (click)="drawerRef.close()" [style.marginRight]="'5px'">Close</button>
+    <button nz-button nzType="primary" (click)="onSave()" [disabled]="this.disableButton">Save</button>
+</div>
+}

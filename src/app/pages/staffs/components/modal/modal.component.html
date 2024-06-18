@@ -1,0 +1,10 @@
+<form nz-form [formGroup]="form" nzLayout="vertical" class="login-form">
+    <nz-form-item>
+        <nz-form-label nzRequired nzFor="title">Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please input title!">
+            <nz-input-group nzPrefixIcon="bold">
+                <input type="text" nz-input formControlName="name" placeholder="Name" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+</form>

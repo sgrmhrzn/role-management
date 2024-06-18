@@ -1,0 +1,65 @@
+<nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar" nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
+        <div class="sidebar-logo">
+            <a target="_blank">
+                <span></span>
+                <h1>Role Management</h1>
+            </a>
+        </div>
+        <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+            <li nz-menu-item nzMatchRouter routerLink="/dashboard">
+                <span nz-icon nzType="dashboard"></span>
+                <span>Dashboard</span>
+            </li>
+            @if((activeUser$ | async)?.permissions?.includes(permissionEnum.RolesAllPrivilege) || (activeUser$
+            | async)?.permissions?.includes(permissionEnum.RolesViewPrivilege)){
+            <li nz-menu-item nzMatchRouter routerLink="/roles">
+                <span nz-icon nzType="partition"></span>
+                <span>Roles</span>
+            </li>
+            }
+            @if((activeUser$ | async)?.permissions?.includes(permissionEnum.StaffsAllPrivilege) || (activeUser$
+            | async)?.permissions?.includes(permissionEnum.StaffsViewPrivilege)){
+            <li nz-menu-item nzMatchRouter routerLink="/staffs">
+                <span nz-icon nzType="team"></span>
+                <span>Staffs</span>
+            </li>
+            }
+            @if((activeUser$ | async)?.permissions?.includes(permissionEnum.AuditReportViewPrivilege)){
+            <li nz-submenu nzIcon="line-chart" nzTitle="Audit & Reporting">
+                <ul>
+                    <li nzMatchRouter nz-menu-item routerLink="/report/reporting">Reporting</li>
+                    <li nzMatchRouter nz-menu-item routerLink="/report/audit">Audit</li>
+                </ul>
+            </li>
+            }
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <div class="app-header">
+                @if(activeUser$ | async; as user) {
+                <span style="float: right;padding-right: 1rem;">
+                    <a nzType="down" nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu2"
+                        nzPlacement="bottomRight"><nz-avatar nz-tooltip [nzTooltipTitle]="user.name"
+                            [nzText]="user.name?.charAt(0)"
+                            style="color:#f56a00; background-color:#fde3cf;"></nz-avatar></a>
+                </span>
+                <nz-dropdown-menu #menu2="nzDropdownMenu">
+                    <ul nz-menu>
+                        <li nz-menu-item> {{user.name}}
+                        </li>
+                        <li nz-menu-divider></li>
+                        <li nz-menu-item (click)="logout()">Logout</li>
+                    </ul>
+                </nz-dropdown-menu>
+                }
+            </div>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+    </nz-layout>
+</nz-layout>

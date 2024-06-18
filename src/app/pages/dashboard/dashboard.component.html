@@ -1,0 +1,39 @@
+<h1>
+    Dashboard
+</h1>
+<div style="background: #ECECEC; padding: 30px;">
+    @if(counts$ | async; as counts){
+    <nz-row [nzGutter]="16">
+        <nz-col [nzSpan]="12">
+            <nz-card>
+                <nz-statistic [nzValue]="counts.roles" [nzTitle]="'Total Roles'" [nzPrefix]="prefixTplOne"
+                    [nzValueStyle]="{ color: '#3F8600' }"></nz-statistic>
+                <ng-template #prefixTplOne><span nz-icon nzType="arrow-up"></span></ng-template>
+            </nz-card>
+        </nz-col>
+        <nz-col [nzSpan]="12">
+            <nz-card>
+                <nz-statistic [nzValue]="counts.users" [nzTitle]="'Total Staffs'" [nzPrefix]="prefixTplOne"
+                    [nzValueStyle]="{ color: '#3F8600' }"></nz-statistic>
+                <ng-template #prefixTplOne><span nz-icon nzType="arrow-up"></span></ng-template>
+            </nz-card>
+        </nz-col>
+    </nz-row>
+    }
+
+</div>
+<div style="margin-top: 2rem;">
+    @if (activeUser$ | async; as user) {
+    <nz-descriptions nzTitle="User Info" nzBordered>
+        <nz-descriptions-item nzTitle="Name"><b>{{user.name}}</b></nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Role"><b>{{user.role?.title}}</b></nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Username"><b>{{user.username}}</b></nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Joined date" [nzSpan]="2">
+            <b>{{user.createdDate | dateTimeFormat}}</b>
+        </nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Is Active" [nzSpan]="3">
+            <nz-badge nzStatus="success" nzText="Active"></nz-badge>
+        </nz-descriptions-item>
+    </nz-descriptions>
+    }
+</div>

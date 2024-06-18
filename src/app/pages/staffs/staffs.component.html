@@ -1,0 +1,43 @@
+<div nz-flex nzJustify="space-between" nzAlign="center">
+    <h1>Staffs</h1>
+    @if(permission.add){
+    <a (click)="showModal()" nz-tooltip nzTooltipTitle="Add"><span nz-icon [style.fontSize]="'25px'"
+            nzType="plus-circle" nzTheme="twotone"></span></a>
+    }
+</div>
+<section>
+    <nz-table #basicTable [nzData]="(users$ | async) || []">
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{data.name}}</td>
+                <td>
+                    <a (click)="showDrawer(data)" nz-tooltip nzTooltipTitle="Detail"><span nz-icon nzType="info-circle"
+                            nzTheme="twotone"></span></a>
+                    @if (data.canDelete) {
+                    @if(permission.update){
+
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a (click)="showModal(data)" nz-tooltip nzTooltipTitle="Edit"><span nz-icon nzType="edit"
+                            nzTheme="twotone"></span></a>
+                    }
+                    @if(permission.delete){
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a nz-popconfirm [nzPopconfirmTitle]="'Are you sure delete '+ data.name + ' user?'"
+                        nzPopconfirmPlacement="bottom" (nzOnConfirm)="confirmDelete(data)" nz-tooltip
+                        nzTooltipTitle="Delete"><span nz-icon nzType="delete" nzTheme="twotone"
+                            [nzTwotoneColor]="'#eb2f96'"></span></a>
+                    }
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</section>

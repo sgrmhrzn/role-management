@@ -1,0 +1,49 @@
+<h1>Reporting</h1>
+
+@if(reports$ | async; as reports){
+<nz-list nzBordered nzSize="small" style="height: 600px;overflow: auto;">
+    @for (item of reports; track item.id) {
+    <nz-list-item>
+        <div>
+            <!-- {{acitivityTypes[item.type]}} -->
+
+            <strong>{{item.role?.title}}</strong>
+            <strong>{{item.staff?.name}}</strong>
+            @switch (item.type){
+            @case (activityTypeEnum.RoleCreate){
+            role added
+            }
+            @case (activityTypeEnum.RoleEdit){
+            role edited
+            }
+            @case (activityTypeEnum.RoleDelete){
+            role deleted
+            }
+            @case (activityTypeEnum.UserCreate){
+            user added
+            }
+            @case (activityTypeEnum.UserEdit){
+            user edited
+            }
+            @case (activityTypeEnum.UserDelete){
+            user deleted
+            }
+            @case (activityTypeEnum.UsersAssignmentChanges){
+            role's users modified
+            }
+            @case (activityTypeEnum.PermissionChanges){
+            role's permissions modified
+            }
+            }
+
+            <i> on {{item.activityDate | dateTimeFormat}} at {{item.activityDate | dateTimeFormat:'time'}} </i>by
+            {{item.createdBy.name}}
+        </div>
+    </nz-list-item>
+    }
+    @if (!reports.length) {
+    <nz-empty nzNotFoundImage="simple"></nz-empty>
+    }
+
+</nz-list>
+}

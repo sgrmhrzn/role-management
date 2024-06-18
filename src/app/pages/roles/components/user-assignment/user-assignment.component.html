@@ -1,0 +1,45 @@
+@if (!nzModalData.isView) {
+<div nz-flex>
+    <nz-select style="flex: 1;" [(ngModel)]="selectedUser" nzPlaceHolder="Select users" nzAllowClear nzShowSearch>
+        @for(u of users$ | async; track u.id){
+        <nz-option [nzValue]="u.id" [nzLabel]="u.name" [nzDisabled]="assignedKeys.includes(u.id)"></nz-option>
+        }
+    </nz-select>
+    <button nz-button nzType="primary" (click)="addUser()" nz-tooltip nzTooltipTitle="Add user"><span nz-icon
+            nzType="user-add" nzTheme="outline"></span></button>
+</div>
+}
+@if(assignedUsers$ | async; as users){
+<nz-list>
+    @for(item of users; track item.id){
+    <nz-list-item>
+        @if(!nzModalData.isView){
+        <ul nz-list-item-actions>
+            <nz-list-item-action>
+                <a (click)="removeUser(item.id)"><span nz-icon nzType="delete" nzTheme="twotone"
+                        [nzTwotoneColor]="'#eb2f96'" nz-tooltip nzTooltipTitle="Remove"></span></a>
+            </nz-list-item-action>
+        </ul>
+        }
+        @if (item) {
+
+        <nz-list-item-meta>
+            <nz-list-item-meta-title>
+                <nz-avatar nz-tooltip [nzText]="item.name.charAt(0)"
+                    style="color:#f56a00; background-color:#fde3cf;margin-right:0.5rem"></nz-avatar>
+                <span>{{ item.name }}</span>
+            </nz-list-item-meta-title>
+        </nz-list-item-meta>
+        } @else {
+        <nz-skeleton [nzAvatar]="true" [nzParagraph]="{ rows: 1 }"></nz-skeleton>
+        }
+    </nz-list-item>
+    }
+</nz-list>
+@if (!users.length) {
+<nz-empty nzNotFoundImage="simple"></nz-empty>
+}
+}
+
+<ng-template #avatar let-item>{{item}}
+</ng-template>

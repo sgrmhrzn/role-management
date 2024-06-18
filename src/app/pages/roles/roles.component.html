@@ -1,0 +1,52 @@
+<div nz-flex nzJustify="space-between" nzAlign="center">
+    <h1>Roles</h1>
+    @if((activeUser$ | async)?.permissions?.includes(permissionEnum.RolesAddPrivilege) || (activeUser$ |
+    async)?.permissions?.includes(permissionEnum.RolesAllPrivilege)){
+    <a (click)="showModal()" nz-tooltip nzTooltipTitle="Add"><span nz-icon [style.fontSize]="'25px'"
+            nzType="plus-circle" nzTheme="twotone"></span></a>
+    }
+</div>
+<section>
+    <nz-table #basicTable [nzData]="(roles$ | async) || []">
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{data.title}}</td>
+                <td>
+                    <a (click)="showDrawer(data, true)" nz-tooltip nzTooltipTitle="Detail"><span nz-icon
+                            nzType="info-circle" nzTheme="twotone"></span></a>
+                    @if (data.canDelete) {
+                    @if((activeUser$ | async)?.permissions?.includes(permissionEnum.RolesEditPrivilege) || (activeUser$
+                    | async)?.permissions?.includes(permissionEnum.RolesAllPrivilege)){
+
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a (click)="showModal(data)" nz-tooltip nzTooltipTitle="Edit"><span nz-icon nzType="edit"
+                            nzTheme="twotone"></span></a>
+                    }
+                    @if((activeUser$ | async)?.permissions?.includes(permissionEnum.RolesDeletePrivilege) ||
+                    (activeUser$ | async)?.permissions?.includes(permissionEnum.RolesAllPrivilege)){
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a nz-popconfirm [nzPopconfirmTitle]="'Are you sure delete '+ data.title + ' role?'"
+                        nzPopconfirmPlacement="bottom" (nzOnConfirm)="confirmDelete(data)" nz-tooltip
+                        nzTooltipTitle="Delete"><span nz-icon nzType="delete" nzTheme="twotone"
+                            [nzTwotoneColor]="'#eb2f96'"></span></a>
+                    }
+                    @if((activeUser$ | async)?.permissions?.includes(permissionEnum.RolesCofigurePrivilege) ||
+                    (activeUser$ | async)?.permissions?.includes(permissionEnum.RolesAllPrivilege)){
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a (click)="showDrawer(data)" nz-tooltip nzTooltipTitle="Configure"><span nz-icon nzType="setting"
+                            nzTheme="twotone"></span></a>
+                    }
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</section>

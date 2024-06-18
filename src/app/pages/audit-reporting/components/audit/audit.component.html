@@ -1,0 +1,120 @@
+<h1>Audit</h1>
+
+@if(users$ | async; as users){
+
+<nz-table #basicTable [nzData]="users" nzBordered  [nzScroll]="{ x: '1100px' }">
+    <thead>
+        <tr>
+            <th rowspan="3">S.N</th>
+            <th rowspan="3">Name</th>
+            <th rowspan="3">Role</th>
+            <th colSpan="10">Permissions</th>
+        </tr>
+        <tr>
+
+            <!-- <th>Assigned Staff</th> -->
+            <th colSpan="5">Roles</th>
+            <th colSpan="4">Staffs</th>
+            <th colspan="1">Audit & Report</th>
+        </tr>
+        <tr>
+            <th>View</th>
+            <th>Add</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Configure</th>
+            <th>View</th>
+            <th>Add</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data; index as i; track: i">
+            <td>{{i + 1}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.role?.title || '-'}}</td>
+            @if (data.permissions?.includes(permissionEnums.RolesAllPrivilege)){
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else{
+            @if(data.permissions?.includes(permissionEnums.RolesViewPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+            @if (data.permissions?.includes(permissionEnums.RolesAddPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+
+            @if (data.permissions?.includes(permissionEnums.RolesEditPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+
+            @if (data.permissions?.includes(permissionEnums.RolesDeletePrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+
+            @if (data.permissions?.includes(permissionEnums.RolesCofigurePrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+            }
+
+            @if (data.permissions?.includes(permissionEnums.StaffsAllPrivilege)){
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else{
+            @if(data.permissions?.includes(permissionEnums.StaffsViewPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+            @if (data.permissions?.includes(permissionEnums.StaffsAddPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+
+            @if (data.permissions?.includes(permissionEnums.StaffsEditPrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+
+            @if (data.permissions?.includes(permissionEnums.StaffsDeletePrivilege)) {
+            <td><ng-container *ngTemplateOutlet="check"></ng-container></td>
+            }@else {
+            <td><ng-container *ngTemplateOutlet="cross"></ng-container></td>
+            }
+            }
+
+            <td>
+                @if (data.permissions?.includes(permissionEnums.AuditReportViewPrivilege)) {
+                <ng-container *ngTemplateOutlet="check"></ng-container>
+                }@else {<ng-container *ngTemplateOutlet="cross"></ng-container>}
+            </td>
+        </tr>
+    </tbody>
+</nz-table>
+
+<ng-template #check>
+    <span class="check" nz-icon nzType="check" nzTheme="outline"></span>
+</ng-template>
+<ng-template #cross>
+    <span class="cross" nz-icon nzType="close" nzTheme="outline"></span>
+</ng-template>
+}
