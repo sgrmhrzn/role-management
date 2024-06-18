@@ -72,7 +72,7 @@ export function appReducer(state = initialState, action: any): IAppState {
     case updateRole.type:
       return {
         ...state,
-        roles: state.roles.map(role => (role.id === action.role.id ? action.role : role))
+        roles: state.roles.map(role => (role.id === action.role.id ? { ...role, title: action.role.title } : role))
       };
     case deleteRole.type: {
       const cloned = _.cloneDeep(state.roles);
@@ -97,7 +97,7 @@ export function appReducer(state = initialState, action: any): IAppState {
     case updateUser.type:
       return {
         ...state,
-        roles: state.roles.map(user => (user.id === action.user.id ? action.user : user))
+        users: state.users.map(user => (user.id === action.user.id ? { ...user, name: action.user.name } : user))
       };
     case deleteUser.type:
       const cloned = _.cloneDeep(state.users);

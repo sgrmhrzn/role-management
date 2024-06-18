@@ -271,12 +271,12 @@ export class AppEffects {
                                 return this.roleService.getRolePermissons(roleData[0].role.id).pipe(
                                     map((permissionData) => {
                                         this.messageService.success(`Log in successful`);
-                                        const user = { id: userData[0].id, name: userData[0].name, role: roleData[0].role, username: userData[0].username, permissions: permissionData[0].permissionIds };
+                                        const user = { id: userData[0].id, name: userData[0].name, role: roleData[0].role, username: userData[0].username, permissions: permissionData[0]?.permissionIds || [] };
                                         localStorage.setItem(environment.ACTIVE_USER_KEY, JSON.stringify(user));
                                         this.router.navigateByUrl('dashboard');
                                         return actions.loginRequestSuccess({ user });
                                     }),
-                                    catchError(() => of())
+                                    catchError((error) => { return throwError(() => new Error(`Error - ${error}`)) })
                                 )
                             } else {
                                 this.messageService.error("Role hasn't been assigned to this user. Please contact administrator.");

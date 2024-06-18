@@ -41,7 +41,7 @@ export class UserService {
      * @returns Observable<IUserModel>
      */
     updateUser(user: IUserModel): Observable<IUserModel> {
-      return this.http.put<IUserModel>(`${environment.SERVER_URL}users/${user.id}`, user);
+      return this.http.patch<IUserModel>(`${environment.SERVER_URL}users/${user.id}`, user);
     }
   
  

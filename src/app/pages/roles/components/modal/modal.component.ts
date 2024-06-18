@@ -83,7 +83,7 @@ export class ModalComponent implements OnInit {
     }
     else {
       if (this.nzModalData?.id) {
-        this.store.dispatch(updateRoleRequest({ role: { ...this.form.getRawValue()} }))
+        this.store.dispatch(updateRoleRequest({ role: { ...this.form.getRawValue(), canDelete:true} }))
       } else {
         this.store.dispatch(addRoleRequest({ role: { ...this.form.getRawValue(), canDelete: true } }))
       }

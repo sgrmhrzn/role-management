@@ -40,7 +40,7 @@ export class RoleService {
    * @returns Observable<IRoleModel>
    */
   updateRole(role: IRoleModel): Observable<IRoleModel> {
-    return this.http.put<IRoleModel>(`${environment.SERVER_URL}roles/${role.id}`, role);
+    return this.http.patch<IRoleModel>(`${environment.SERVER_URL}roles/${role.id}`, role);
   }
 
   /**
