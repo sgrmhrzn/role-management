@@ -1,4 +1,4 @@
-# RoleManagment
+# RoleManagement
 
 This project was generated with following technical stacks
 1.	Angular v17.3.0
