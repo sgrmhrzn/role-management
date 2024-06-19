@@ -6,7 +6,14 @@ This project was generated with following technical stacks
 3.	Typescript v5.4.2
 4.	Json-server v1.0.0-beta.1
 
+## Install dependencies
+
+1. Install node v18.20.3 if not installed in the machine
+2. Run `npm install -g @angular/cli@17`
+2. Run `npm i` to install all the dependencies of the application
+
 ## Run in local 
+
 1. Run `npx json-server .\db.json` for local db
 2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 

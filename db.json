@@ -84,20 +84,20 @@
       "createdOn": "2024-06-18T02:38:59.857Z"
     },
     {
-      "id": "0b49a683-f577-4bf0-b0aa-adb66147292c",
+      "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
       "name": "John Papa",
       "canDelete": true,
       "username": "john",
       "password": "123456",
-      "createdDate": "2024-06-18T10:46:33.226Z"
+      "createdDate": "2024-06-19T01:05:39.776Z"
     },
     {
-      "id": "4dd7845d-b4b4-4302-baa8-1a8dbdece762",
+      "id": "e01b7fd4-7ab6-4d1e-aa71-7a51a83693d5",
       "name": "Eric Smith",
       "canDelete": true,
       "username": "eric",
       "password": "123456",
-      "createdDate": "2024-06-18T10:47:12.638Z"
+      "createdDate": "2024-06-19T01:13:37.030Z"
     }
   ],
   "roles": [
@@ -107,12 +107,12 @@
       "canDelete": false
     },
     {
-      "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+      "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
       "title": "Admin",
       "canDelete": true
     },
     {
-      "id": "2da979bb-4616-4468-a1db-3a3478182119",
+      "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
       "title": "Basic",
       "canDelete": true
     }
@@ -131,43 +131,42 @@
       ]
     },
     {
-      "id": "a6108e55-eee7-4082-b549-aa42c5e65333",
+      "id": "b2dcf7d1-960b-4d3c-9e5d-133bc2faa94b",
       "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
         "title": "Admin",
         "canDelete": true,
         "isView": false
       },
       "permissionIds": [
         "0-0",
-        "0-1-0",
-        "0-1-1-0"
-      ]
-    },
-    {
-      "id": "2b9244e0-9e2e-41e4-9fba-38680c252d64",
-      "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
-        "title": "Basic",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
         "0-1"
       ]
     },
     {
-      "id": "fc65c5b2-694f-4339-8d5d-7470ea1bcaf3",
+      "id": "f4c5a099-664a-4e81-babf-d26837c9717c",
       "role": {
-        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
-        "title": "Test",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin",
         "canDelete": true,
         "isView": false
       },
       "permissionIds": [
         "0-0",
-        "0-1",
-        "0-2"
+        "0-1"
+      ]
+    },
+    {
+      "id": "036438a3-4836-4ddf-b673-d6b82d53760c",
+      "role": {
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
+        "title": "Basic",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-1-0",
+        "0-0-0"
       ]
     }
   ],
@@ -183,60 +182,34 @@
       ]
     },
     {
-      "id": "863c7aaf-3518-4ae2-b3ed-7c06e65cf3f5",
+      "id": "3e4f7149-d533-4bdb-8afc-9f18a058c0cd",
       "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
         "title": "Admin",
         "canDelete": true,
         "isView": false
       },
       "userIds": [
-        "0b49a683-f577-4bf0-b0aa-adb66147292c"
+        "1da82e56-9e7a-4dc6-96ef-96316544818b"
       ]
     },
     {
-      "id": "a93b29b6-f0b1-4e91-b661-6c9b990be617",
+      "id": "1a6dd845-432a-42ff-b2a3-64e55285e9ef",
       "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
         "title": "Basic",
         "canDelete": true,
         "isView": false
       },
       "userIds": [
-        "4dd7845d-b4b4-4302-baa8-1a8dbdece762",
-        "e1471838-5b74-4c40-879f-620c270645e1"
-      ]
-    },
-    {
-      "id": "96e0c36f-f74e-4104-a850-516b8b3c4fe7",
-      "role": {
-        "id": "6c7cdc9c-eb9a-463e-8d05-015aa0273d16",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      },
-      "userIds": [
-        "c12c7855-a3cb-4ea5-be4f-d0402c8765df"
-      ]
-    },
-    {
-      "id": "77ef49a8-7b90-4bc6-a133-cef5f6b9bc4b",
-      "role": {
-        "id": "39bce5f8-8cb2-43e2-b2b7-29df55647ded",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      },
-      "userIds": [
-        "80c73655-2195-4acd-a690-e0b19d1661dc",
-        "efe85a9e-4e66-4cdf-abcf-8e6b506255a2"
+        "e01b7fd4-7ab6-4d1e-aa71-7a51a83693d5"
       ]
     }
   ],
   "activityLogs": [
     {
-      "id": "f6bd9d1b-1213-4cc0-8d68-458a6615a120",
-      "activityDate": "2024-06-18T10:46:33.245Z",
+      "id": "f8422415-6584-4846-9f3f-5ad73545bf23",
+      "activityDate": "2024-06-19T01:05:39.790Z",
       "type": 5,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
@@ -244,35 +217,17 @@
       },
       "details": "John Papa user added",
       "staff": {
-        "id": "0b49a683-f577-4bf0-b0aa-adb66147292c",
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
         "name": "John Papa",
         "canDelete": true,
         "username": "john",
         "password": "123456",
-        "createdDate": "2024-06-18T10:46:33.226Z"
+        "createdDate": "2024-06-19T01:05:39.776Z"
       }
     },
     {
-      "id": "ee010212-ba96-43d6-9f8b-0948ad78f906",
-      "activityDate": "2024-06-18T10:47:12.649Z",
-      "type": 5,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Eric Smith user added",
-      "staff": {
-        "id": "4dd7845d-b4b4-4302-baa8-1a8dbdece762",
-        "name": "Eric Smith",
-        "canDelete": true,
-        "username": "eric",
-        "password": "123456",
-        "createdDate": "2024-06-18T10:47:12.638Z"
-      }
-    },
-    {
-      "id": "e27b88cc-a077-4678-b99e-a5e0fee01ab1",
-      "activityDate": "2024-06-18T10:47:25.410Z",
+      "id": "28c540da-1c6e-4999-85c5-e23d52d01a9b",
+      "activityDate": "2024-06-19T01:05:51.117Z",
       "type": 2,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
@@ -280,29 +235,44 @@
       },
       "details": "Admin role added",
       "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
         "title": "Admin",
         "canDelete": true
       }
     },
     {
-      "id": "5214aae2-3ddd-4e5e-a44b-b39d3ec89425",
-      "activityDate": "2024-06-18T10:47:30.047Z",
-      "type": 2,
+      "id": "5eb78755-03b1-4024-80c7-707468377366",
+      "activityDate": "2024-06-19T01:05:59.217Z",
+      "type": 3,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
         "name": "Super admin"
       },
-      "details": "Basic role added",
+      "details": "Admin 2 role updated",
       "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
-        "title": "Basic",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin 2",
         "canDelete": true
       }
     },
     {
-      "id": "4d27bbf1-94fa-4535-ab07-ec2e4e949030",
-      "activityDate": "2024-06-18T10:48:15.235Z",
+      "id": "36577f06-c920-4ff4-8d58-93477d30aa2a",
+      "activityDate": "2024-06-19T01:06:02.314Z",
+      "type": 3,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Admin role updated",
+      "role": {
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "ecf19eee-c9b3-4b49-8711-2c52d2986861",
+      "activityDate": "2024-06-19T01:06:12.348Z",
       "type": 8,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
@@ -310,19 +280,39 @@
       },
       "details": "Permissions modified for Admin",
       "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
         "title": "Admin",
         "canDelete": true,
         "isView": false
       },
       "permissionIds": [
         "0-0",
-        "0-1-0"
+        "0-1"
       ]
     },
     {
-      "id": "f2df2907-01b3-4a41-b760-e1484fdd0da8",
-      "activityDate": "2024-06-18T10:48:21.488Z",
+      "id": "8aeeca27-437d-4693-b743-34c786f2e91d",
+      "activityDate": "2024-06-19T01:06:18.243Z",
+      "type": 8,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Permissions modified for Admin",
+      "role": {
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "51c9894f-1abf-4656-9954-1d5e1ba940c9",
+      "activityDate": "2024-06-19T01:06:26.679Z",
       "type": 9,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
@@ -330,15 +320,142 @@
       },
       "details": "Users modified for Admin",
       "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
         "title": "Admin",
         "canDelete": true,
         "isView": false
       }
     },
     {
-      "id": "91bbfed3-8aa0-4239-bff9-0e3f63b033dd",
-      "activityDate": "2024-06-18T10:48:50.667Z",
+      "id": "e09709d2-9f21-4758-802d-9c069f87b938",
+      "activityDate": "2024-06-19T01:07:26.816Z",
+      "type": 6,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "John Papa 2 user updated",
+      "staff": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa 2"
+      }
+    },
+    {
+      "id": "c336313e-6c35-4110-94dc-8908e3e51dd8",
+      "activityDate": "2024-06-19T01:07:42.395Z",
+      "type": 3,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Admin 2 role updated",
+      "role": {
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin 2",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "6f08bc15-0b4a-4e22-9fec-18fb9635a23a",
+      "activityDate": "2024-06-19T01:07:48.481Z",
+      "type": 3,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Admin role updated",
+      "role": {
+        "id": "8389b8bc-35aa-4250-8a12-16355ba81c1d",
+        "title": "Admin",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "1ed308da-dada-4321-944c-40e9169de77d",
+      "activityDate": "2024-06-19T01:07:53.217Z",
+      "type": 6,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "John Papa user updated",
+      "staff": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      }
+    },
+    {
+      "id": "1f9c42da-d0a7-43d3-8d10-86718d4380dc",
+      "activityDate": "2024-06-19T01:13:37.042Z",
+      "type": 5,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Eric Smith user added",
+      "staff": {
+        "id": "e01b7fd4-7ab6-4d1e-aa71-7a51a83693d5",
+        "name": "Eric Smith",
+        "canDelete": true,
+        "username": "eric",
+        "password": "123456",
+        "createdDate": "2024-06-19T01:13:37.030Z"
+      }
+    },
+    {
+      "id": "315b3c8c-e0cc-4423-a850-a14938a20d30",
+      "activityDate": "2024-06-19T01:13:50.991Z",
+      "type": 2,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Basic role added",
+      "role": {
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
+        "title": "Basic",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "dfbb910c-8a97-4a75-bd70-166d6ade8f20",
+      "activityDate": "2024-06-19T01:14:10.179Z",
+      "type": 8,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Permissions modified for Basic",
+      "role": {
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
+        "title": "Basic",
+        "canDelete": true,
+        "isView": false
+      },
+      "permissionIds": [
+        "0-0-0",
+        "0-1-0"
+      ]
+    },
+    {
+      "id": "37a9527a-425a-498c-a341-1f0ecb55c87e",
+      "activityDate": "2024-06-19T01:14:15.411Z",
+      "type": 9,
+      "createdBy": {
+        "id": "1da82e56-9e7a-4dc6-96ef-96316544818b",
+        "name": "John Papa"
+      },
+      "details": "Users modified for Basic",
+      "role": {
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
+        "title": "Basic",
+        "canDelete": true,
+        "isView": false
+      }
+    },
+    {
+      "id": "cf987b8d-8241-4450-8741-8d9e93ebbe2c",
+      "activityDate": "2024-06-19T01:15:34.273Z",
       "type": 8,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
@@ -346,859 +463,100 @@
       },
       "details": "Permissions modified for Basic",
       "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
         "title": "Basic",
         "canDelete": true,
         "isView": false
       },
       "permissionIds": [
-        "0-1-0",
-        "0-1-1-1"
+        "0-1-0"
       ]
     },
     {
-      "id": "990502d6-7aa4-434b-aa83-c656637b136c",
-      "activityDate": "2024-06-18T10:48:56.910Z",
-      "type": 9,
+      "id": "7254773b-b7fb-4135-bb54-7c2646a45d51",
+      "activityDate": "2024-06-19T01:25:27.118Z",
+      "type": 2,
       "createdBy": {
         "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
         "name": "Super admin"
       },
-      "details": "Users modified for Basic",
+      "details": "Supervisor role added",
       "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
-        "title": "Basic",
-        "canDelete": true,
-        "isView": false
+        "id": "219f48e5-0a9f-4bb6-8b49-ffcc1524d366",
+        "title": "Supervisor",
+        "canDelete": true
       }
     },
     {
-      "id": "b24fec39-25be-420e-bda4-2c6d0b121432",
-      "activityDate": "2024-06-18T10:52:55.535Z",
+      "id": "7ad19d32-4b72-48cb-8b64-4d761771bbaf",
+      "activityDate": "2024-06-19T01:25:59.242Z",
+      "type": 4,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "Supervisor role deleted",
+      "role": {
+        "id": "219f48e5-0a9f-4bb6-8b49-ffcc1524d366",
+        "title": "Supervisor",
+        "canDelete": true
+      }
+    },
+    {
+      "id": "f33b4778-3ae1-4676-979c-5d445c3958fc",
+      "activityDate": "2024-06-19T01:26:10.007Z",
+      "type": 5,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "John Doe user added",
+      "staff": {
+        "id": "87a37835-7d9a-4035-b0a2-1a0611c34815",
+        "name": "John Doe",
+        "canDelete": true,
+        "username": "john",
+        "password": "123456",
+        "createdDate": "2024-06-19T01:26:09.996Z"
+      }
+    },
+    {
+      "id": "5e97670e-6de6-45c5-83a0-8d659a7e6fe1",
+      "activityDate": "2024-06-19T01:26:14.642Z",
+      "type": 7,
+      "createdBy": {
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
+      },
+      "details": "John Doe user deleted",
+      "staff": {
+        "id": "87a37835-7d9a-4035-b0a2-1a0611c34815",
+        "name": "John Doe",
+        "canDelete": true,
+        "username": "john",
+        "password": "123456",
+        "createdDate": "2024-06-19T01:26:09.996Z"
+      }
+    },
+    {
+      "id": "662663dd-ceb3-41ab-a98c-b5927b09944d",
+      "activityDate": "2024-06-19T01:26:35.730Z",
       "type": 8,
       "createdBy": {
-        "id": "0b49a683-f577-4bf0-b0aa-adb66147292c",
-        "name": "John Papa"
+        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
+        "name": "Super admin"
       },
       "details": "Permissions modified for Basic",
       "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
+        "id": "d89cf5d2-6af8-47b8-810c-f50278a7a7fa",
         "title": "Basic",
         "canDelete": true,
         "isView": false
       },
       "permissionIds": [
-        "0-1"
-      ]
-    },
-    {
-      "id": "3471af96-0b67-4740-b479-7d3eaf035ee9",
-      "activityDate": "2024-06-18T10:54:57.665Z",
-      "type": 8,
-      "createdBy": {
-        "id": "0b49a683-f577-4bf0-b0aa-adb66147292c",
-        "name": "John Papa"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-1",
-        "0-1-1"
-      ]
-    },
-    {
-      "id": "cf062961-fcdb-429c-8ce3-978ded943312",
-      "activityDate": "2024-06-18T13:16:37.884Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1"
-      ]
-    },
-    {
-      "id": "d79554d6-9472-4f2c-81aa-b13ab615250e",
-      "activityDate": "2024-06-18T13:45:59.487Z",
-      "type": 5,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Basic User user added",
-      "staff": {
-        "id": "e1471838-5b74-4c40-879f-620c270645e1",
-        "name": "Basic User",
-        "canDelete": true,
-        "username": "basic",
-        "password": "123456",
-        "createdDate": "2024-06-18T13:45:59.473Z"
-      }
-    },
-    {
-      "id": "f36c0fb3-8cdb-4ff3-8dbb-891545833f23",
-      "activityDate": "2024-06-18T13:46:14.526Z",
-      "type": 9,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Users modified for Basic",
-      "role": {
-        "id": "2da979bb-4616-4468-a1db-3a3478182119",
-        "title": "Basic",
-        "canDelete": true,
-        "isView": false
-      }
-    },
-    {
-      "id": "9904f39f-ee14-4c12-a913-bb52b2c6c543",
-      "activityDate": "2024-06-18T13:47:30.474Z",
-      "type": 7,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Basic User user deleted",
-      "staff": {
-        "id": "e1471838-5b74-4c40-879f-620c270645e1",
-        "name": "Basic User",
-        "canDelete": true,
-        "username": "basic",
-        "password": "123456",
-        "createdDate": "2024-06-18T13:45:59.473Z"
-      }
-    },
-    {
-      "id": "c2349ce6-7dcb-41a6-94fa-1cb1469db289",
-      "activityDate": "2024-06-18T14:11:44.016Z",
-      "type": 2,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role added",
-      "role": {
-        "id": "6c7cdc9c-eb9a-463e-8d05-015aa0273d16",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "32a66c9d-00cc-4584-a3d7-dfda298d6298",
-      "activityDate": "2024-06-18T14:12:36.385Z",
-      "type": 5,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "test user user added",
-      "staff": {
-        "id": "c12c7855-a3cb-4ea5-be4f-d0402c8765df",
-        "name": "test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:12:36.374Z"
-      }
-    },
-    {
-      "id": "1650d541-b10f-45db-8863-9c58f9905f90",
-      "activityDate": "2024-06-18T14:13:12.783Z",
-      "type": 9,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Users modified for Test",
-      "role": {
-        "id": "6c7cdc9c-eb9a-463e-8d05-015aa0273d16",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      }
-    },
-    {
-      "id": "ee3bc474-8c7d-4e94-b05e-245ac6fb56cd",
-      "activityDate": "2024-06-18T14:13:19.851Z",
-      "type": 4,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role deleted",
-      "role": {
-        "id": "6c7cdc9c-eb9a-463e-8d05-015aa0273d16",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "7879f085-53c7-44ed-b1b8-fd64ce28c49d",
-      "activityDate": "2024-06-18T14:20:30.360Z",
-      "type": 2,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role added",
-      "role": {
-        "id": "b975d0c6-d4f3-442b-b497-3f3afbbe57b4",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "80e3561b-3cf3-4b54-b5aa-d4ae4dd72143",
-      "activityDate": "2024-06-18T14:23:15.434Z",
-      "type": 2,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Teest role added",
-      "role": {
-        "id": "6e3e2b38-62da-40e4-8cc3-5d74fdbe81fa",
-        "title": "Teest",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "2e3158cf-2e86-48a9-9097-9c526731d00f",
-      "activityDate": "2024-06-18T14:23:47.389Z",
-      "type": 7,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "test user user deleted",
-      "staff": {
-        "id": "c12c7855-a3cb-4ea5-be4f-d0402c8765df",
-        "name": "test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:12:36.374Z"
-      }
-    },
-    {
-      "id": "b0bcef4c-20c2-430b-9451-ac69326eb5fa",
-      "activityDate": "2024-06-18T14:23:52.683Z",
-      "type": 2,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role added",
-      "role": {
-        "id": "39bce5f8-8cb2-43e2-b2b7-29df55647ded",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "b3114519-c70b-438a-86b5-c320fc356f8e",
-      "activityDate": "2024-06-18T14:24:00.784Z",
-      "type": 5,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test user user added",
-      "staff": {
-        "id": "80c73655-2195-4acd-a690-e0b19d1661dc",
-        "name": "Test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:24:00.771Z"
-      }
-    },
-    {
-      "id": "3d74193e-17cd-418a-ba43-90cf18456314",
-      "activityDate": "2024-06-18T14:24:11.657Z",
-      "type": 9,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Users modified for Test",
-      "role": {
-        "id": "39bce5f8-8cb2-43e2-b2b7-29df55647ded",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      }
-    },
-    {
-      "id": "ef757694-3227-4f3f-8b40-c197684cb37c",
-      "activityDate": "2024-06-18T14:24:16.804Z",
-      "type": 7,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test user user deleted",
-      "staff": {
-        "id": "80c73655-2195-4acd-a690-e0b19d1661dc",
-        "name": "Test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:24:00.771Z"
-      }
-    },
-    {
-      "id": "b785dc60-f766-4783-ab7c-1b4b60702a49",
-      "activityDate": "2024-06-18T14:24:36.268Z",
-      "type": 5,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "test user user added",
-      "staff": {
-        "id": "efe85a9e-4e66-4cdf-abcf-8e6b506255a2",
-        "name": "test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:24:36.253Z"
-      }
-    },
-    {
-      "id": "c394956f-94ce-49a4-a4d6-5dfd0c9013de",
-      "activityDate": "2024-06-18T14:24:45.661Z",
-      "type": 9,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Users modified for Test",
-      "role": {
-        "id": "39bce5f8-8cb2-43e2-b2b7-29df55647ded",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      }
-    },
-    {
-      "id": "80f0efab-7d7b-478c-afc1-8cb944db4c01",
-      "activityDate": "2024-06-18T15:12:54.722Z",
-      "type": 2,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role added",
-      "role": {
-        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "ec29f6b6-0ad1-4549-bcec-771c39623093",
-      "activityDate": "2024-06-18T15:13:00.427Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Test",
-      "role": {
-        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
-        "title": "Test",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1",
-        "0-2"
-      ]
-    },
-    {
-      "id": "68c0b2c1-7285-4ba5-a2ef-80e6133553f6",
-      "activityDate": "2024-06-18T15:13:05.947Z",
-      "type": 4,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Test role deleted",
-      "role": {
-        "id": "9eceb9f0-1b5b-48cc-9ce6-0905c47053b3",
-        "title": "Test",
-        "canDelete": true
-      }
-    },
-    {
-      "id": "078ea1ad-97cd-474f-9bff-18a415b5d7d4",
-      "activityDate": "2024-06-18T15:18:22.945Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
         "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
+        "0-0-0"
       ]
-    },
-    {
-      "id": "39730dd0-8143-4b30-bb52-ef2ef6fc3f02",
-      "activityDate": "2024-06-18T15:18:41.976Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0-0",
-        "0-0-1-1",
-        "0-0-1-2",
-        "0-0-1-3"
-      ]
-    },
-    {
-      "id": "a7c2567b-e9ef-47f8-b9ff-04b59b4de8f7",
-      "activityDate": "2024-06-18T15:18:56.303Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-0-1-2",
-        "0-0-1-3",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "9c7f0454-c173-4084-9b2a-3221795e54fc",
-      "activityDate": "2024-06-18T15:19:15.584Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-0-1-2",
-        "0-0-1-3",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "2666bbf4-595a-401f-9ee4-42d2d1398daf",
-      "activityDate": "2024-06-18T15:19:40.504Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-0-1-3",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "f905a608-40ca-4c92-97e8-fb48d9574f25",
-      "activityDate": "2024-06-18T15:19:54.062Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-0-1-3",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "53eaede7-c07a-4bc8-978f-e406ae9ad7b7",
-      "activityDate": "2024-06-18T15:20:02.760Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-0-1-3",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "2cfcbefa-4029-4ad6-ae40-ec747e718ee4",
-      "activityDate": "2024-06-18T15:20:09.710Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0-0",
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2"
-      ]
-    },
-    {
-      "id": "5c7eb813-eb7d-4a1b-9dc3-212874df44d3",
-      "activityDate": "2024-06-18T15:20:59.678Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0"
-      ]
-    },
-    {
-      "id": "71f72a16-f37e-4a83-ad89-ecd854909d01",
-      "activityDate": "2024-06-18T15:21:00.913Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0"
-      ]
-    },
-    {
-      "id": "5b3872a5-91e9-434c-a5d1-d4730d612eee",
-      "activityDate": "2024-06-18T15:21:12.033Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0-0",
-        "0-0-1-0",
-        "0-0-1-1",
-        "0-0-1-2"
-      ]
-    },
-    {
-      "id": "c8e35acf-2a73-409c-a439-479794613215",
-      "activityDate": "2024-06-18T15:23:33.196Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0"
-      ]
-    },
-    {
-      "id": "66504c13-5dde-475f-8a3f-461e17276162",
-      "activityDate": "2024-06-18T15:24:46.341Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0-0",
-        "0-0-1-1",
-        "0-0-1-2",
-        "0-0-1-3"
-      ]
-    },
-    {
-      "id": "9467a079-c337-418d-9b6e-a53532fc80e9",
-      "activityDate": "2024-06-18T15:25:56.400Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0-0",
-        "0-0-1-1",
-        "0-0-1-2",
-        "0-0-1-3"
-      ]
-    },
-    {
-      "id": "4b8f1513-c3cd-4407-9cfa-6cc0f678b114",
-      "activityDate": "2024-06-18T15:28:24.050Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-1-0",
-        "0-1-1-1",
-        "0-1-1-2",
-        "0-0"
-      ]
-    },
-    {
-      "id": "46b74efe-3dc0-4b77-8746-f9495068099d",
-      "activityDate": "2024-06-18T15:28:36.640Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1",
-        "0-2"
-      ]
-    },
-    {
-      "id": "bc727c41-259d-4e95-a313-dd9612949db0",
-      "activityDate": "2024-06-18T15:28:43.488Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1"
-      ]
-    },
-    {
-      "id": "b6dffb84-b9ba-439c-8832-949ff8164a6c",
-      "activityDate": "2024-06-18T15:28:48.103Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1",
-        "0-2"
-      ]
-    },
-    {
-      "id": "af0da7b7-e4fa-43d6-ac69-43239ea3d8dd",
-      "activityDate": "2024-06-18T15:28:52.364Z",
-      "type": 8,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "Permissions modified for Admin",
-      "role": {
-        "id": "94854ecb-30a3-41af-92ae-5d27d9e4c68c",
-        "title": "Admin",
-        "canDelete": true,
-        "isView": false
-      },
-      "permissionIds": [
-        "0-0",
-        "0-1-0",
-        "0-1-1-0"
-      ]
-    },
-    {
-      "id": "5f9bc8d7-ba04-4df4-adc9-fa0014451de9",
-      "activityDate": "2024-06-18T15:29:38.185Z",
-      "type": 7,
-      "createdBy": {
-        "id": "4e1ea1d3-e385-47ec-9344-0995a6804438",
-        "name": "Super admin"
-      },
-      "details": "test user user deleted",
-      "staff": {
-        "id": "efe85a9e-4e66-4cdf-abcf-8e6b506255a2",
-        "name": "test user",
-        "canDelete": true,
-        "username": "test",
-        "password": "123456",
-        "createdDate": "2024-06-18T14:24:36.253Z"
-      }
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
